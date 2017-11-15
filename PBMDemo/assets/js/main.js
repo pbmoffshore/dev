@@ -63,7 +63,7 @@ if ('serviceWorker' in navigator) {
             }
         }
 
-        function showBookmark(var browserType) {
+        function showBookmark(browserType) {
             if (chromeElements.length > 0) {
                 if(browserType == 'chrome') {
 			chromeElements[0].style.display = "block";
