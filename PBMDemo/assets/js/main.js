@@ -28,7 +28,9 @@ function checkCookies() {
         if (cook2 == 'Y') {
             hideBookmark();
         } else {
+		alert('calling function');
             showBookmark();
+		alert('done calling function');
         }
     }
 }
