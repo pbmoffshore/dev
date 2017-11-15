@@ -1,6 +1,6 @@
 {  
-   "short_name":"TestPB",
-   "name":"SwissLife",
+   "short_name":"SwissLife",
+   "name":"TestApp",
    "icons":[  
       {  
          "src":"android-chrome-192x192.png",
@@ -8,9 +8,9 @@
          "sizes":"192x192"
       },
       {  
-         "src":"android-chrome-512x512.png",
+         "src":"android-chrome-310x310.png",
          "type":"image/png",
-         "sizes":"512x512"
+         "sizes":"310x310"
       }
    ],
    "theme_color":"#ffffff",
