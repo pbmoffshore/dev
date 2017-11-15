@@ -30,7 +30,7 @@ if ('serviceWorker' in navigator) {
 			{
                 hideBookmark();
             } else {
-                showBookmark();
+                showBookmark(bookmarkLoader());
             }
         }
 	}
@@ -63,11 +63,16 @@ if ('serviceWorker' in navigator) {
             }
         }
 
-        function showBookmark() {
+        function showBookmark(var browserType) {
             if (chromeElements.length > 0) {
-                chromeElements[0].style.display = "block";
-                safariElements[0].style.display = "block";
-            }
+                if(browserType == 'chrome') {
+			chromeElements[0].style.display = "block";
+                	safariElements[0].style.display = "none";
+            	}
+		else if(browserType == 'safari') {
+			chromeElements[0].style.display = "none";
+                	safariElements[0].style.display = "block";
+		}
         }
 
         function bookmarkLoader() {
@@ -76,11 +81,9 @@ if ('serviceWorker' in navigator) {
             var regex = new RegExp(/(android)|(chrome)|(mac)|(safari)/gi);
             var result = navigator.userAgent.match(regex);
             if (result == chromeOnAndroid){
-				 chromeElements[0].style.display = "block";
-                		safariElements[0].style.display = "none";
+				 return 'chrome';
 			}
             else if (result == safari){
-				 chromeElements[0].style.display = "none";
-                		safariElements[0].style.display = "block";
+				 return 'safari';
 			}
         }
