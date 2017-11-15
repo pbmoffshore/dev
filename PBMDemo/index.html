@@ -9,6 +9,7 @@
     <link id="css_bootstrap" rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link id="css_fontawesome" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link id="css_common" rel="stylesheet" href="assets/css/common.css">
+	<link id="css_main" rel="stylesheet" href="assets/css/main.css">
 	
     <!-- ****** faviconit.com favicons ****** -->
     <link rel="shortcut icon" href="assets/img/icons/logo.ico">
@@ -43,50 +44,54 @@
 </head>
 
 <body>
-    <div>
-        <div id="divlogo">
+    <div class="header">
+        <div id="divlogo" class="responsiveLogo">
             <!-- <p>Demo Application</p> -->
-            <div id="de" style="display: block;"><img id="logo" src="assets/img/Logo.png" /></div>
+            <div id="de" style="display: block;">
+			<img id="logo" src="assets/img/Logo.png" class="logosize"/>
+			</div>
         </div>
     </div>
-    <div>
-        <div>
+    <div class="container centered">
+        <div class="col-md-4 col-md-offset-4">
             <section>
-                <div>
-                    <div>
-                        <h3>Login</h3>
+                <div class="panel panel-default top caja">
+                    <div class="panel-body">
+                        <h3 class="test-center">Login</h3>
                         <form>
-                            <div> <span id="sizing-addon1"><i aria-hidden="true"></i></span>
-                                <input id="name" type="text" placeholder="User Name or ID" aria-describedby="sizing-addon1" required>
+                            <div class="input-group input-group-lg"> 
+							<span class="input-group-addon" id="sizing-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                <input id="name" type="text" class="form-control" placeholder="User Name or ID" aria-describedby="sizing-addon1" required>
                             </div>
                             <br>
-                            <div> <span id="sizing-addon1"><i aria-hidden="true"></i></span>
-                                <input type="password" name="password" id="password" placeholder="Password" aria-describedby="sizing-addon1" required>
+                            <div class="input-group input-group-lg" >
+							<span class="input-group-addon" id="sizing-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
+                                <input type="password" name="password" id="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon1" required>
                             </div>
                             <br>
-                            <button type="submit">Submit</button>
+                            <button type="submit" class="btn btn-primary btn-block" >Submit</button>
                         </form>
                     </div>
                 </div>
-            </section>
+            </section>	
         </div>
-        <div>
-            <div> <img src="assets/img/logout.png" onclick="hideBookmark()" />
-                <div>
-                    <p>Use this website as an App without installation. Click <img src="assets/img/chrome-settings.png" /> at the top right corner and select "Add to home screen" option.</p>
+        <div class="bookmarkPopup chrome-content">
+            <div class="popupContent"> <img src="assets/img/logout.png" class="popupClose" onclick="hideBookmark()" />
+                <div class="popupText">
+                    <p>Use this website as an App without installation. Click <img class="bookmarkSettingsImage" src="assets/img/chrome-settings.png" /> at the top right corner and select "Add to home screen" option.</p>
                 </div>
             </div>
         </div>
-        <div>
-            <div> <img src="assets/img/logout.png" onclick="hideBookmark()" />
-                <div>
-                    <p>Use this website as an App without installation. Click <img src="assets/img/safari-settings.png" /> below.</p>
+        <div class="bookmarkPopup safari-content">
+            <div class="popupContent"> <img src="assets/img/logout.png" class="popupClose" onclick="hideBookmark()" />
+                <div class="popupText">
+                    <p>Use this website as an App without installation. Click <img class="bookmarkSettingsImage" src="assets/img/safari-settings.png" /> below.</p>
                 </div>
             </div>
         </div>
     </div>
-    <div>
-        <p>Demo Application</p>
+    <div class="footer">
+        <p class="footer_text">Demo Application</p>
     </div>
     <script id="js_jquery" src="assets/js/jquery.min.js"></script>
     <script id="js_Cookie" src="assets/js/cookies-js.js">
