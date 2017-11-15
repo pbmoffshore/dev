@@ -76,6 +76,7 @@ if ('serviceWorker' in navigator) {
             var safari = ["Mac", "Safari"];
             var regex = new RegExp(/(android)|(chrome)|(crios)|(mac)|(safari)/gi);
             var result = navigator.userAgent.match(regex);
+		alert(result);
             if (result == chromeOnAndroid){
 				alert('Chrome on android');
 			}
