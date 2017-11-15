@@ -62,9 +62,11 @@ function hideBookmark() {
 }
 
 function showBookmark() {
+	alert('entered function');
 var browserType = bookmarkLoader();
+	alert(browserType);
     if (chromeElements.length > 0) {
-	    alert(browserType);
+	    alert('chrome Elements is > 0');
         if (browserType == 'chrome') {
 		alert('chrome');
             chromeElements[0].style.display = "block";
