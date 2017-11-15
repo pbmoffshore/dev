@@ -21,7 +21,6 @@ if ('serviceWorker' in navigator) {
 function checkCookies() {
     var cook1 = Cookies.get("PBM_spm");
     var cook2 = Cookies.get("IS");
-    var browserType = bookmarkLoader();
     if (cook1 == 'undefined' || cook1 == null || cook2 == 'undefined' || cook2 == null) {
         setCookies();
         //showBookmark();
@@ -29,7 +28,7 @@ function checkCookies() {
         if (cook2 == 'Y') {
             hideBookmark();
         } else {
-            showBookmark(browserType);
+            showBookmark();
         }
     }
 }
@@ -62,7 +61,8 @@ function hideBookmark() {
     }
 }
 
-function showBookmark(browserType) {
+function showBookmark() {
+var browserType = bookmarkLoader();
     if (chromeElements.length > 0) {
 	    alert(browserType);
         if (browserType == 'chrome') {
