@@ -1,46 +1,145 @@
+/*START General*/
+
+::-webkit-scrollbar
+/* style scroll bar width */
+
+{
+	width: 10px;
+}
+
+::-webkit-scrollbar-track
+/* style scroll bar */
+
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb
+/* style scroll bar */
+
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+body {
+	font-family: Trebuchet MS !important;
+	background-color: white !important;
+	font-size: 14px !important;
+	line-height: 1.428571429 !important;
+}
+
+a,
+a:hover,
+a:focus {
+	color: #F44336 !important;
+	text-decoration: none !important;
+}
+
+
+/*END */
+
+
+/*START - LOGIN & OTP Page */
+
 .center {
 	text-align: center;
-	}
-.header {
-	position: fixed;top: 0;height: 70px;width: 100%;background-color: #eee;z-index: 5;
-	}
-.footer {
-	background-color: #eee;position: fixed;padding-top: 8px;bottom: 0;height: 30px;width: 100%;z-index: 5;font-size: 12px;
-	}
-.footer_text {
-	text-align: center;color: #8a8989;
-	}
-.responsiveLogo {
-	float: right;margin-top: 0px;text-align: right;
-	}
-img {
-	max-width: 100%;max-height: 100%;
-	}
-.logosize {
-	width: 80px;height: 50px;margin-right: 20px;margin-top: 5px;
-	}
-.centered {
-	height: 300px;position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;
-	}
-.logo {
-	height: 20px;margin-right: 5px;float: right;padding-top: 7px;
-	}
-.bookmarkPopup { 
-position: fixed; right: 10%; bottom: 38px; left: 10%; margin: auto; max-width: 325px; background-size: contain;
 }
-.popupContent{
-	border: 1px solid black;background: #f6f6f6;padding: 5px 5px 5px 22px;border-radius: 12px;
-	}
+
+.header {
+	position: fixed;
+	top: 0;
+	height: 70px;
+	width: 100%;
+	background-color: #eee;
+	z-index: 5;
+}
+
+.footer {
+	background-color: #eee;
+	position: fixed;
+	padding-top: 8px;
+	bottom: 0;
+	height: 30px;
+	width: 100%;
+	z-index: 5;
+	font-size: 12px;
+}
+
+.footer_text {
+	text-align: center;
+	color: #8a8989;
+}
+
+
+/* .footer_text:hover {color: rgba(237, 26, 59, 0.68) !important;} */
+
+.responsiveLogo {
+	float: right;
+	margin-top: 0px;
+	text-align: right;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.logosize {
+	width: 80px;
+	height: 65px;
+	margin-right: 20px;
+	margin-top: 5px;
+}
+
+
+/*below CSS is used to make absolute center of a element irrespective of all browsers & devices */
+
+.centered {
+	height: 300px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+
+/*END*/
+
+
+.bookmarkPopup {
+	position: fixed;
+	right: 10%;
+	bottom: 38px;
+	left: 10%;
+	margin: auto;
+	max-width: 325px;
+	background-size: contain;
+}
+
+.popupContent {
+	border: 1px solid black;
+	background: #f6f6f6;
+	padding: 5px 5px 5px 22px;
+	border-radius: 12px;
+}
+
 .popupClose {
-	height: 22px;float: right;
-	}
+	height: 22px;
+	float: right;
+}
+
 .popupClose:hover {
 	cursor: pointer;
-	}
+}
+
 .popupText {
 	padding-top: 10px;
-	}
+}
+
 .bookmarkSettingsImage {
 	vertical-align: -5px;
-	}
-
+}
