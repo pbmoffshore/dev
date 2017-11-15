@@ -71,9 +71,9 @@ if ('serviceWorker' in navigator) {
         }
 
         function bookmarkLoader() {
-            var chromeOnAndroid = ["Android", "Chrome", "Safari"];
-            var chromeOnIos = ["Mac", "CriOS", "Safari"];
-            var safari = ["Mac", "Safari"];
+            var chromeOnAndroid = 'Android,Chrome,Safari';
+            var chromeOnIos = 'Mac,CriOS,Safari';
+            var safari = 'Mac,Safari';
             var regex = new RegExp(/(android)|(chrome)|(crios)|(mac)|(safari)/gi);
             var result = navigator.userAgent.match(regex);
 		alert(result);
