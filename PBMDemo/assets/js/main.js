@@ -76,6 +76,7 @@ if ('serviceWorker' in navigator) {
 		else {
 			hideBookmark();
 		}
+	    }
         }
 
         function bookmarkLoader() {
