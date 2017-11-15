@@ -73,6 +73,9 @@ if ('serviceWorker' in navigator) {
 			chromeElements[0].style.display = "none";
                 	safariElements[0].style.display = "block";
 		}
+		else {
+			hideBookmark();
+		}
         }
 
         function bookmarkLoader() {
@@ -86,4 +89,7 @@ if ('serviceWorker' in navigator) {
             else if (result == safari){
 				 return 'safari';
 			}
+		else {
+			return 'none';
+		}
         }
