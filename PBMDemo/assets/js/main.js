@@ -72,21 +72,15 @@ if ('serviceWorker' in navigator) {
 
         function bookmarkLoader() {
             var chromeOnAndroid = 'Android,Chrome,Safari';
-            var chromeOnIos = 'Mac,CriOS,Safari';
             var safari = 'Mac,Safari';
-            var regex = new RegExp(/(android)|(chrome)|(crios)|(mac)|(safari)/gi);
+            var regex = new RegExp(/(android)|(chrome)|(mac)|(safari)/gi);
             var result = navigator.userAgent.match(regex);
-		alert(result);
             if (result == chromeOnAndroid){
-				alert('Chrome on android');
-			}
-            else if (result == chromeOnIos) {
-				alert('Chrome on iOS');
+				 chromeElements[0].style.display = "block";
+                		safariElements[0].style.display = "none";
 			}
             else if (result == safari){
-				alert('Safari on iOS');
-			}
-            else {
-				alert('none');
+				 chromeElements[0].style.display = "none";
+                		safariElements[0].style.display = "block";
 			}
         }
