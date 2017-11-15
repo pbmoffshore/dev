@@ -23,14 +23,12 @@ function checkCookies() {
     var cook2 = Cookies.get("IS");
     if (cook1 == 'undefined' || cook1 == null || cook2 == 'undefined' || cook2 == null) {
         setCookies();
-        //showBookmark();
+        alert('calling function');
+        showBookmark();
+	alert('done calling function');
     } else {
         if (cook2 == 'Y') {
             hideBookmark();
-        } else {
-		alert('calling function');
-            showBookmark();
-		alert('done calling function');
         }
     }
 }
