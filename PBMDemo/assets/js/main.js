@@ -23,9 +23,7 @@ function checkCookies() {
     var cook2 = Cookies.get("IS");
     if (cook1 == 'undefined' || cook1 == null || cook2 == 'undefined' || cook2 == null) {
         setCookies();
-        alert('calling function');
         showBookmark();
-	alert('done calling function');
     } else {
         if (cook2 == 'Y') {
             hideBookmark();
@@ -62,21 +60,15 @@ function hideBookmark() {
 }
 
 function showBookmark() {
-	alert('entered function');
 var browserType = bookmarkLoader();
-	alert(browserType);
     if (chromeElements.length > 0) {
-	    alert('chrome Elements is > 0');
         if (browserType == 'chrome') {
-		alert('chrome');
             chromeElements[0].style.display = "block";
             safariElements[0].style.display = "none";
         } else if (browserType == 'safari') {
-		alert('safari');
             chromeElements[0].style.display = "none";
             safariElements[0].style.display = "block";
         } else {
-		alert('none');
             hideBookmark();
         }
     }
