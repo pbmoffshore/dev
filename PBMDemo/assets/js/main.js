@@ -21,6 +21,8 @@ if ('serviceWorker' in navigator) {
     function checkCookies() {
         var cook1 = Cookies.get("PBM_spm");
 		var cook2 = Cookies.get("IS");
+	    var browserType  = bookmarkLoader();
+	    alert(browserType);
 		if (cook1 == 'undefined' || cook1 == null || cook2 == 'undefined' || cook2 == null) {
             setCookies();
             //showBookmark();
@@ -30,7 +32,7 @@ if ('serviceWorker' in navigator) {
 			{
                 hideBookmark();
             } else {
-                showBookmark(bookmarkLoader());
+                showBookmark(browserType);
             }
         }
 	}
